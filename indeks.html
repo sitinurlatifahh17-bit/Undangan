@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Undangan</title>
+<style>
+body {
+  margin: 0;
+  font-family: serif;
+}
+img {
+  width: 100%;
+  display: block;
+}
+#nama {
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 24px;
+  font-weight: bold;
+}
+.cover {
+  position: relative;
+}
+</style>
+</head>
+
+<body>
+
+<div class="cover">
+  <img src="cover.png_20260108_102742_0000.png">
+  <div id="nama"></div>
+</div>
+
+<script>
+const params = new URLSearchParams(window.location.search);
+const nama = params.get("to");
+if (nama) {
+  document.getElementById("nama").innerText = nama;
+}
+</script>
+
+</body>
+</html>
